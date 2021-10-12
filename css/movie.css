@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Lobster', cursive;
+  background: black;
+}
+
+/* ////////// navbar //////////  */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  background: linear-gradient(-45deg, #53B8BB, #ECD662, #53B8BB, #ECD662);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  font-family: 'Lobster', cursive;
+}
+
+nav .logo {
+  margin: 1.125rem 0 0 1rem;
+  text-decoration: none;
+  color: black;
+}
+nav a span {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+  padding: 0 .5rem 0 .375rem;
+  border: .063rem solid #b7cb13;
+  border-radius: .25rem;
+  font-size: 1.725rem;
+  background-image: linear-gradient(to right top, #969b1a, #a9b033, #bbc549, #ceda5f, #e1f074);
+  box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding-left: .875rem;
+  margin: .125rem;
+}
+nav ul li {
+  padding: 1.25rem;
+
+}
+
+nav .navbar ul li a {
+  font-size: 1.1rem;
+  color: #2b394a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  border-bottom: .125rem solid;
+}
+
+/* ////////// search box //////////  */
+.search-section {
+  display: flex;
+  justify-content: center;
+}
+
+.search-section .search-box input {
+  width: 55rem;
+  height: 1.875rem;
+  margin: .625rem;
+  text-align: center;
+  background: #FFD523;
+  color: black;
+}
+
+
+/*////////////// movies ///////////// */
+
+.Movies-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Movies-section .size {
+  width: 18.75rem;
+  border-radius: .625rem;
+  height: 18.75rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .625rem;
+  box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+
+}
+.Movies-section .size img {
+  width: 100%;
+  height: 100%;
+  border-radius: .625rem;
+  transition: all 0.5s;
+}
+
+.Movies-section .size img:hover {
+  transform: scaley(1.5);
+  cursor: pointer;
+}
+
+.Movies-section .size .Movie-detail {
+  width: 18.75rem;
+  height: 3.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  color: #2b394a;
+  position: absolute;
+  top: 15rem;
+  text-align: center;
+  border-bottom-left-radius: .625rem;
+  border-bottom-right-radius: .625rem;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+
+.Movies-section .size.inactive {
+  max-height: 0;
+  opacity: 0;
+  max-width: 0;
+}
+
+.Movies-section .size.active {
+  max-height: 18.75rem;
+  opacity: 1;
+  max-width: 18.75rem;
+}
+
+.Movies-section .Movie-detail .fa-cog {
+  color: black;
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 80%;
+  transition: .2s ease;
+}
+
+.Movies-section .Movie-detail .fa-cog:hover {
+  color: #fff;
+}
+
+.Movies-section .Movie-detail .spider-head {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* ////////////// carousel //////////// */
+.carousel-inner .image {
+  max-height: 90vh;
+}
+
+.carousel-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top:0;
+ bottom:0;
+ left:0;
+ right:0;
+ background:rgba(0,0,0,0.5);
+
+}
+
+/* ////////// footer ////////// */
+footer {
+  margin-top: .625rem;
+  margin-bottom: .625rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #53B8BB, #ECD662, #53B8BB, #ECD662);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+footer .logo {
+  margin: 1.125rem 0 0 1rem;
+  color: black;
+  text-decoration: none;
+
+
+}
+footer a span {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+  padding: 0 0.5rem 0 .375rem;
+  border: .063rem solid #b7cb13;
+  border-radius: .25rem;
+  font-size: 1.625rem;
+  background-image: linear-gradient(to right top, #969b1a, #a9b033, #bbc549, #ceda5f, #e1f074);
+  box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+}
+
+footer p {
+  display: inline-block;
+  margin-left: .313rem;
+  font-size: .938rem;
+}
+
+
+
+/* //////////// media queries ///////////// */
+
+/* 64em = 1024px and 80em = 1280px */
+@media (min-width: 64em) and (max-width: 80em) {
+  .selected {
+    width: 12rem;
+  }
+  .search-section .search-box input {
+    width: 50rem;
+  }
+}
+
+/* 62.375em = 998px */
+@media (max-width: 62.375em) {
+  html {
+    font-size: 90%;
+  }
+  nav .navbar ul li a {
+    font-size: 1.5rem;
+    color: #2B2B2B;
+  }
+
+  .Movies-section {
+    gap: .7rem;
+  }
+
+  footer p {
+    font-weight: 600;
+  }
+}
+
+/* 768px = 48em */
+@media (max-width: 48em) {
+  html {
+    font-size: 75%;
+  }
+  nav .navbar ul li a {
+    font-size: 1.5rem;
+    color: #2B2B2B;
+  }
+
+  .Movies-section {
+    gap: 1rem;
+    color: black;
+  }
+  .selected::after {
+    content: "";
+    right: 1rem;
+    top: 0.4rem;
+}
+
+  .select-box {
+    width: 13rem;
+  }
+  .search-section .search-box input {
+    width: 18rem;
+  }
+  footer p {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+/* 316px = 19.75em and 24.938em = 399px */
+@media (min-width: 19.75em) and (max-width: 24.938em) {
+  html {
+    font-size: 60%;
+  }
+  .selected::after {
+    content: "";
+    width: 1rem;
+    right: 0.2rem;
+    top: 0.4rem;
+}
+
+.search-section .search-box input {
+  width: 24rem;
+}
+
+footer p {
+  font-size: .9rem;
+  font-weight: 600;
+}
+  }

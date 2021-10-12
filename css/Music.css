@@ -1,0 +1,535 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Lobster', cursive;
+}
+
+/* /////////// music page navbar ////////// */
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  background: linear-gradient(-45deg, #53B8BB, #ECD662, #53B8BB, #ECD662);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  font-family: 'Lobster', cursive;
+}
+
+nav .logo {
+  margin: 1.125rem 0 0 1rem;
+  text-decoration: none;
+  color: black;
+}
+nav a span {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+  padding: 0 .5rem 0 .375rem;
+  border: .063rem solid #b7cb13;
+  border-radius: .25rem;
+  font-size: 1.725rem;
+  background-image: linear-gradient(to right top, #969b1a, #a9b033, #bbc549, #ceda5f, #e1f074);
+  box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding-left: .875rem;
+  margin: .125rem;
+}
+
+nav ul li {
+  padding: 1.25rem;
+
+}
+
+nav .navbar ul li a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #2b394a;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  border-bottom: .125rem solid;
+}
+
+/* ///////// artist navbar ///////////// */
+
+.artist {
+  margin-bottom: 0.625rem;
+  position: fixed;
+  top: -6.25rem;
+  z-index: 1;
+  background-color: #00c0d9;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  transition: top 0.5s;
+}
+.artist ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: .875rem;
+  margin: .125rem;
+}
+
+.artist ul li {
+  transition: .2s ease-in-out;
+  text-align: center;
+  width: 50%;
+}
+
+.artist ul li a {
+  text-decoration: none;
+  color: #2B2B2B;
+  font-size: 1rem;
+}
+
+.artist ul li a img {
+  border-radius: 50%;
+  width: 35%;
+  padding: .5rem;
+}
+
+.artist ul li:hover {
+  cursor: pointer;
+  background-color: #00929c;
+  border-radius: 10%;
+  box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* ///////// adding gif //////// */
+.container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.container .gif {
+  width: 100%;
+  height: 95vh;
+  background-image: url(../video/headphone.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* ////////// top heading //////// */
+
+.text-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+
+}
+
+.text-box .text-1 {
+  color: #2b394a;
+  font-size: 4.375rem;
+  position: absolute;
+  transform: translate(10%, 90%);
+}
+
+.text-box .text-2 {
+  color: #2b394a;
+  font-size: 4.063rem;
+  position: absolute;
+  transform: translate(77%, 190%);
+}
+.text-box .text-2 span {
+  position: absolute;
+  transform: translate(-107%, 160%);
+  font-size: 1.875rem;
+}
+
+.text-box .text-3 {
+  color: #2b394a;
+  font-size: 2.438rem;
+  position: absolute;
+  transform: translate(7%, 527%);
+}
+
+.text-box .text-3 span {
+  position: absolute;
+  transform: translate(-354%, 78%);
+}
+
+/* ////////// music component ///////// */
+
+.music-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #00c0d9;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.music-section .jubin, .arijit, .udit, .kumarsanu, .neha {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.music-section h3 {
+  color: #212121;
+  font-weight: 600;
+  margin-left: 1.125rem;
+  margin-top: .625rem;
+  padding-top: 7rem;
+  padding-bottom: .5rem;
+  width: 90%;
+  border-bottom: .125rem solid #212121;
+}
+
+.music-section .size {
+  width: 18.75rem;
+  border-radius: .625rem;
+  height: 23.75rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .625rem;
+  box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.music-section .size:hover {
+  transform: scale(1deg);
+  transition: .2s ease;
+}
+
+.music-section .size img {
+  width: 100%;
+  height: 81%;
+  border-top-left-radius: .625rem;
+  border-top-right-radius: .625rem;
+  transition: all 0.5s;
+}
+
+.music-section .size .music {
+  width: 18.75rem;
+  height: 20%;
+  color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  top: 19.2rem;
+}
+
+.size .music_controls {
+  width: 18.75rem;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(18, 18, 17, .37);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: .4rem;
+  border-bottom-left-radius: .625rem;
+  border-bottom-right-radius: .625rem;
+
+}
+.music_controls .fas {
+  color: #2B2B2B;
+  cursor: pointer;
+  filter: drop-shadow(0 1.2rem 3rem .5rem rgba(0, 0, 0, 0.4));
+}
+
+.music_controls .main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  color: #f6f6f6;
+  background-color: #111;
+}
+
+.music_controls .main-button:hover {
+  color: #111;
+  background-color: #f6f6f6;
+}
+
+
+/* ///////////  Footer ////////// */
+
+footer {
+  margin-top: .625rem;
+  margin-bottom: .625rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #53B8BB, #ECD662, #53B8BB, #ECD662);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+footer .logo {
+  margin: 1.125rem 0 0 1rem;
+  color: black;
+  text-decoration: none;
+
+
+}
+footer a span {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+  padding: 0 0.5rem 0 .375rem;
+  border: .063rem solid #b7cb13;
+  border-radius: .25rem;
+  font-size: 1.625rem;
+  background-image: linear-gradient(to right top, #969b1a, #a9b033, #bbc549, #ceda5f, #e1f074);
+  box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+}
+
+footer p {
+  display: inline-block;
+  margin-left: .313rem;
+  font-size: .938rem;
+}
+
+
+/* ///////////  media queries ////////// */
+
+/* 80em = 1280px */
+@media (max-width: 80em) and (orientation : landscape) {
+  .container .gif {
+      height: 89vh;
+  }
+  .text-box {
+    top:20%;
+  }
+}
+
+/* 64em = 1024px */
+@media (max-width: 64em) and (orientation : portrait) {
+  .container .gif {
+      height: 60vh;
+  }
+  .text-box {
+    top:15%;
+  }
+  .text-box .text-1 {
+    font-size: 5.375rem;
+  }
+
+  .text-box .text-2 {
+    font-size: 5.063rem;
+  }
+  .text-box .text-2 span {
+    font-size: 2.875rem;
+  }
+
+  .text-box .text-3 {
+    font-size: 3.438rem;
+  }
+
+}
+/* 64em = 1024px */
+@media (max-width: 64em) and (orientation : landscape) {
+  .container .gif {
+      height: 86vh;
+  }
+
+}
+
+/* 62.375em = 998px */
+@media (max-width: 62.375em) {
+  html {
+    font-size: 90%;
+  }
+  .artist ul li a {
+    font-size: .8rem;
+  }
+
+  nav .navbar ul li a {
+    color: #2B2B2B;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .arijit, .jubin, .udit, .kumarsanu, .neha {
+    gap: .9rem;
+  }
+  footer p {
+    font-weight: 600;
+  }
+}
+
+
+/* 48em = 768px */
+@media (max-width: 48em) and (orientation : portrait) {
+  html {
+    font-size: 75%;
+  }
+
+  .container .gif {
+      height: 60vh;
+  }
+
+  .text-box {
+    top: 15%;
+  }
+
+  .text-box .text-1 {
+    font-size: 5.375rem;
+  }
+
+  .text-box .text-2 {
+    font-size: 5.063rem;
+  }
+  .text-box .text-2 span {
+    font-size: 2.875rem;
+  }
+
+  .text-box .text-3 {
+    font-size: 3.438rem;
+  }
+
+}
+
+/* 48em = 768px */
+@media (max-width: 48em) and (orientation : landscape) {
+  html {
+    font-size: 75%;
+  }
+
+  .container .gif {
+      height: 88vh;
+  }
+
+  .arijit, .jubin, .udit, .kumarsanu, .neha {
+    gap: .9rem;
+  }
+
+  .artist ul li a {
+    font-weight: 600;
+  }
+
+  .text-box {
+    top: 15%;
+  }
+
+  footer p {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+/* 33.875em = 542px */
+@media (max-width: 33.875em) {
+  .container .gif {
+      height: 60vh;
+  }
+  .text-box {
+    top: 10%
+  }
+  .text-box .text-1 {
+    font-size: 4.375rem;
+  }
+
+  .text-box .text-2 {
+    font-size: 4.063rem;
+  }
+  .text-box .text-2 span {
+    font-size: 1.875rem;
+  }
+
+  .text-box .text-3 {
+    font-size: 2.438rem;
+  }
+}
+
+/* 28.25em = 452px */
+@media (max-width: 28.25em) {
+  .artist {
+    top: -20.125rem;
+  }
+
+  .artist ul {
+    display: block;
+  }
+
+  .artist ul li {
+    width: 100%;
+  }
+
+  .artist ul li a img {
+    border-radius: 50%;
+    width: 12%;
+    padding: .3rem;
+}
+
+.artist ul li a {
+  font-size: 1.2rem;
+}
+
+  footer p {
+    font-size: .9rem;
+    font-weight: 600;
+  }
+}
+
+/* 19.75em = 316px and 24.938em = 399px */
+@media (min-width: 19.75em) and (max-width: 24.938em) {
+  html {
+    font-size: 60%;
+  }
+
+  nav .navbar ul li a {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .artist {
+    top: -30.125rem;
+  }
+
+  .artist ul {
+    display: block;
+  }
+
+  .artist ul li {
+    width: 100%;
+  }
+
+  .artist ul li a img {
+    border-radius: 50%;
+    width: 12.5%;
+    padding: .3rem;
+}
+
+.artist ul li a {
+  font-size: 1.5rem;
+}
+
+  footer p {
+    font-size: .9rem;
+    font-weight: 600;
+  }
+}
